@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CarsRace</string>
+    <string name="mainView">Введите количество машинок (не более 10)</string>
+</resources>
