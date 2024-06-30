@@ -66,9 +66,9 @@ class MainActivity : AppCompatActivity() {
                 carImage.setImageResource(car.icon)
                 carImage.setColorFilter(car.color)
                 carImage.tag = "carImage" + i
-                carsArray.shuffle()
                 carsContainer?.addView(carImage)
             }
+            carsArray.shuffle()
             cycle = 1
             currentPos = 0
             currentRace = 1
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     2 -> {
                         for (carImage in carsContainer?.children!!) {
-                            if (carImage.tag.equals("carImage" + carsArray[currentPos + 1].id)) {
+                            if (carImage.tag.equals("carImage" + carsArray[currentPos].id)) {
                                 if (carsArray[currentPos] is Cabriolet) {
                                     (carImage as ImageView).setImageResource(R.drawable.ic_del_cabriolet)
                                 } else if (carsArray[currentPos] is Crossover) {
