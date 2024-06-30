@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
+import androidx.core.view.get
 import androidx.core.widget.doOnTextChanged
 import com.google.android.flexbox.FlexboxLayout
 import kotlin.random.Random
@@ -83,7 +84,15 @@ class MainActivity : AppCompatActivity() {
                     1 -> {
                         for (carImage in carsContainer?.children!!) {
                             if (carImage.tag.equals("carImage" + carsArray[currentPos + 1].id)) {
-                                carsContainer?.removeView(carImage)
+                                if (carsArray[currentPos + 1] is Cabriolet) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_cabriolet)
+                                } else if (carsArray[currentPos + 1] is Crossover) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_crossover)
+                                } else if (carsArray[currentPos + 1] is Sedan) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_sedan)
+                                } else {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_offroad_car)
+                                }
                                 break
                             }
                         }
@@ -91,8 +100,16 @@ class MainActivity : AppCompatActivity() {
                     }
                     2 -> {
                         for (carImage in carsContainer?.children!!) {
-                            if (carImage.tag.equals("carImage" + carsArray[currentPos].id)) {
-                                carsContainer?.removeView(carImage)
+                            if (carImage.tag.equals("carImage" + carsArray[currentPos + 1].id)) {
+                                if (carsArray[currentPos] is Cabriolet) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_cabriolet)
+                                } else if (carsArray[currentPos] is Crossover) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_crossover)
+                                } else if (carsArray[currentPos] is Sedan) {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_sedan)
+                                } else {
+                                    (carImage as ImageView).setImageResource(R.drawable.ic_del_offroad_car)
+                                }
                                 break
                             }
                         }
