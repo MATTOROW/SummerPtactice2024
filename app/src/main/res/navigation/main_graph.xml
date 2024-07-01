@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.itis.task2.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_outputTextFragment"
+            app:destination="@id/outputTextFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.itis.task2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.itis.task2.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nullFragment"
+        android:name="ru.itis.task2.NullFragment"
+        android:label="fragment_null"
+        tools:layout="@layout/fragment_null" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="ru.itis.task2.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/outputTextFragment"
+        android:name="ru.itis.task2.OutputTextFragment"
+        android:label="fragment_output_text"
+        tools:layout="@layout/fragment_output_text" />
+</navigation>
