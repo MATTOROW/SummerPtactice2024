@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OutputTextFragment">
+    tools:context=".fragments.OutputTextFragment">
 
     <TextView
         android:id="@+id/outputText"

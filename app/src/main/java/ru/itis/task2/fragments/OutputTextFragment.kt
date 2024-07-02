@@ -1,4 +1,4 @@
-package ru.itis.task2
+package ru.itis.task2.fragments
 
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.animation.Animation
+import ru.itis.task2.R
 import ru.itis.task2.databinding.FragmentOutputTextBinding
 
 class OutputTextFragment : Fragment(R.layout.fragment_output_text) {

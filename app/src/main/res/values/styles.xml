@@ -4,4 +4,17 @@
         <item name="android:textSize">34sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="CountryName">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="CountryCapital">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="roundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+        <item name="color">@color/white</item>
+    </style>
 </resources>

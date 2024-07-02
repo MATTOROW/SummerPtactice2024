@@ -7,4 +7,5 @@
     <string name="title_null_fragment">Null Fragment</string>
     <string name="input_hint">Введите текст</string>
     <string name="give_button">Передать текст</string>
+    <string name="go_back_button">Вернуться</string>
 </resources>

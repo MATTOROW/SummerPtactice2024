@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.itis.task2.MainFragment"
+        android:name="ru.itis.task2.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -17,27 +17,44 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="ru.itis.task2.ProfileFragment"
+        android:name="ru.itis.task2.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="ru.itis.task2.SettingsFragment"
+        android:name="ru.itis.task2.fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/nullFragment"
-        android:name="ru.itis.task2.NullFragment"
+        android:name="ru.itis.task2.fragments.NullFragment"
         android:label="fragment_null"
         tools:layout="@layout/fragment_null" />
     <fragment
         android:id="@+id/infoFragment"
-        android:name="ru.itis.task2.InfoFragment"
+        android:name="ru.itis.task2.fragments.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_detailedInfoFragment"
+            app:destination="@id/detailedInfoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/outputTextFragment"
-        android:name="ru.itis.task2.OutputTextFragment"
+        android:name="ru.itis.task2.fragments.OutputTextFragment"
         android:label="fragment_output_text"
         tools:layout="@layout/fragment_output_text" />
+    <fragment
+        android:id="@+id/detailedInfoFragment"
+        android:name="ru.itis.task2.fragments.DetailedInfoFragment"
+        android:label="fragment_detailed_info"
+        tools:layout="@layout/fragment_detailed_info" >
+        <action
+            android:id="@+id/action_detailedInfoFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
 </navigation>
